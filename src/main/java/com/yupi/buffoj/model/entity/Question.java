@@ -3,26 +3,20 @@ package com.yupi.buffoj.model.entity;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 帖子
+ * 题目
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * @TableName question
  */
-@TableName(value = "post")
+@TableName(value = "question")
 @Data
-public class Post implements Serializable {
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
+public class Question {
     /**
      * id
      */
-    @TableId(type = IdType.ASSIGN_ID)
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -36,9 +30,34 @@ public class Post implements Serializable {
     private String content;
 
     /**
-     * 标签列表 json
+     * 标签列表（json 数组）
      */
     private String tags;
+
+    /**
+     * 题目答案
+     */
+    private String answer;
+
+    /**
+     * 题目提交数
+     */
+    private Integer submitNum;
+
+    /**
+     * 题目通过数
+     */
+    private Integer acceptedNum;
+
+    /**
+     * 判题用例（json 数组）
+     */
+    private String judgeCase;
+
+    /**
+     * 判题配置（json 对象）
+     */
+    private String judgeConfig;
 
     /**
      * 点赞数

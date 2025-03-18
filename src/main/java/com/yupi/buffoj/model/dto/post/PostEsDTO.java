@@ -4,7 +4,6 @@ import cn.hutool.core.collection.CollUtil;
 import cn.hutool.json.JSONUtil;
 import com.yupi.buffoj.model.entity.Post;
 import lombok.Data;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.annotation.Id;
@@ -27,6 +26,8 @@ import java.util.List;
 public class PostEsDTO implements Serializable {
 
     private static final String DATE_TIME_PATTERN = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * id
@@ -80,8 +81,6 @@ public class PostEsDTO implements Serializable {
      * 是否删除
      */
     private Integer isDelete;
-
-    private static final long serialVersionUID = 1L;
 
     /**
      * 对象转包装类

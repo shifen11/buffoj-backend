@@ -16,7 +16,14 @@ public enum JudgeInfoMessageEnum {
 
     ACCEPT("成功", "Accepted"),
     WRONG_ANSWER("答案错误", "Wrong_Answer"),
-    SYSTEM_ERROR("System Error", "系统错误");
+    SYSTEM_ERROR("System Error", "系统错误"),
+    TIME_LIMIT_EXCEEDED("超出时间限制", "Time_Limit_Exceeded"),
+    MEMORY_LIMIT_EXCEEDED("超出内存限制", "Memory_Limit_Exceeded"),
+    PRESENTATION_ERROR("Presentation Error", "格式错误"),
+    OUTPUT_LIMIT_EXCEEDED("输出超限", "Output_Limit_Exceeded"),
+    RUNTIME_ERROR("运行时错误", "Runtime_Error"),
+    COMPILE_ERROR("编译错误", "Compile_Error"),
+    IDLENESS_LIMIT_EXCEEDED("程序不输出", "Idleness_Limit_Exceeded");
 
     private final String text;
 
